@@ -1,12 +1,16 @@
+import groovy.util.logging.Slf4j
+
 /**
  * Created by amarcinkowski on 14.04.16.
  */
+@Slf4j
 class Game {
 
     private int[] rolls = new int[21]
     private int currentRoll = 0
 
     def roll(Integer pins) {
+        log.info "Rolled ${pins}"
         rolls[currentRoll++] = pins;
     }
 
@@ -25,6 +29,7 @@ class Game {
                 frameIndex += 2;
             }
         }
+        log.info "The score is ${score}"
         return score;
     }
 
