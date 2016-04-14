@@ -1,2 +1,6 @@
 build/
 lib/
+.gradle/
+.idea/
+TheBowlingGameKata.ipr
+TheBowlingGameKata.iws
