@@ -10,7 +10,7 @@ class Game {
     private int currentRoll = 0
 
     def roll(Integer pins) {
-        log.info "Rolled ${pins}"
+        log.trace "Rolled ${pins}"
         rolls[currentRoll++] = pins;
     }
 
@@ -29,6 +29,7 @@ class Game {
                 frameIndex += 2;
             }
         }
+        log.info "The game: ${rolls}"
         log.info "The score is ${score}"
         return score;
     }
